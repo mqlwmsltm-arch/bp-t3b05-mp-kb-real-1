@@ -1,167 +1,367 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>마포 노래방 정보 소개 | 마포 노래방 내돈내산</title>
-  <meta name="description" content="마포 노래방 투명 정찰제 소개 페이지. 우리가 직접 발품 팔아 검증한 내상 제로 꿀통 및 예약 상세 안내 📞 010-6279-0862.">
-  <link rel="canonical" href="https://t3b05-mp-kb-real-1.pages.dev/about.html">
-  <style>
-    :root {
-      --primary: #1A0E0E;
-      --secondary: #4E1A1A;
-      --accent: #D4AF37;
-      --bg: #120A0A;
-      --text: #F5EBE6;
-      --font: 'Pretendard', -apple-system, sans-serif;
-    }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: var(--font);
-      line-height: 1.8;
-      letter-spacing: -0.02em;
-    }
-    a { color: var(--accent); text-decoration: none; }
-    .header {
-      backdrop-filter: blur(12px);
-      background: rgba(26, 14, 14, 0.7);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      position: sticky; top:0; z-index:100; padding: 15px 24px;
-    }
-    .header-inner {
-      max-width: 1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center;
-    }
-    .logo { font-size:1.3rem; font-weight:900; color:#fff; }
-    .nav { display:flex; gap:20px; font-size:0.9rem; }
-    .nav a { color: rgba(255,255,255,0.7); font-weight:600; }
-    .nav a:hover { color: var(--accent); }
-
-    .hero-sub {
-      padding: 60px 24px; text-align:center; background: linear-gradient(180deg, var(--secondary) 0%, var(--bg) 100%);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-    .hero-sub h1 { font-size: 2.2rem; font-weight:800; color:#fff; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마포 로즈 노래방 소개 | 힐링 디렉터 Bro의 복원 철학</title>
+    <meta name="description" content="마포구 마포역 및 공덕 일대에서 피로로 오류가 난 직장인 육체를 복원하고 투명한 가격을 서비스하는 플랫폼 스토리. 선입금 없는 양심 노래바.">
+    <meta name="keywords" content="마포 노래방 소개, 마포 가성비 가라오케, 마포구 노래바 정찰제, 마포역 룸노래방 추천">
+    <link rel="canonical" href="https://t3b05-mp-kb-real-1.pages.dev/about.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
     
-    .container { max-width:800px; margin: 0 auto; padding: 60px 24px; }
-    .content-box {
-      background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius:16px;
-      padding: 40px; backdrop-filter: blur(8px);
-    }
-    .content-box h2 { font-size: 1.5rem; color:#fff; margin-bottom:20px; border-left: 4px solid var(--accent); padding-left:12px; }
-    .content-box p { font-size:1.05rem; opacity:0.9; margin-bottom:20px; }
+    <style>
+        :root {
+            --bg-gradient: radial-gradient(circle at 50% 50%, #150d12 0%, #060204 100%);
+            --glass-bg: rgba(255, 255, 255, 0.02);
+            --glass-border: rgba(255, 255, 255, 0.06);
+            --accent-rosegold: #b76e79;
+            --accent-pink: #ff8da1;
+            --accent-violet: #7b2cbf;
+            --text-main: #f5f3f4;
+            --text-muted: #a49e9e;
+        }
 
-    .price-table {
-      width:100%; border-collapse: collapse; margin-top:30px; margin-bottom:30px;
-    }
-    .price-table th, .price-table td {
-      border: 1px solid rgba(255,255,255,0.08); padding:12px; text-align:left;
-    }
-    .price-table th { background: rgba(255,255,255,0.05); color:#fff; font-weight:700; }
-    .price-table td { font-size:0.95rem; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .cta-box {
-      margin-top: 40px; text-align:center; padding: 30px; background: rgba(212, 175, 55, 0.03);
-      border: 1px dashed var(--accent); border-radius: 12px;
-    }
-    .cta-box h3 { font-size:1.3rem; color:#fff; margin-bottom:12px; }
-    .cta-phone {
-      display:inline-block; font-size:1.5rem; font-weight:900; color:var(--accent); margin-top:10px;
-    }
+        body {
+            font-family: 'Outfit', 'Noto Sans KR', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            min-height: 100vh;
+            line-height: 1.7;
+            overflow-x: hidden;
+            position: relative;
+        }
 
-    .footer {
-      background: #090505; border-top: 1px solid rgba(255,255,255,0.08); padding: 48px 24px; text-align:center; font-size:0.9rem; opacity:0.8;
-    }
-  </style>
+        /* Aura Background Elements */
+        .aura-1 {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(183, 110, 121, 0.3) 0%, rgba(0, 0, 0, 0) 70%);
+            top: 20%;
+            left: -100px;
+            z-index: -1;
+            filter: blur(80px);
+        }
+
+        .aura-2 {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(123, 44, 191, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+            bottom: 20%;
+            right: -150px;
+            z-index: -1;
+            filter: blur(100px);
+        }
+
+        header {
+            width: 100%;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background: rgba(21, 13, 18, 0.85);
+            border-bottom: 1px solid var(--glass-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.45rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-pink), var(--accent-rosegold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-pink);
+        }
+
+        .hotline-btn {
+            background: linear-gradient(90deg, var(--accent-pink) 0%, var(--accent-rosegold) 100%);
+            border: none;
+            padding: 0.6rem 1.3rem;
+            border-radius: 30px;
+            color: #150d12;
+            font-weight: 800;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(183, 110, 121, 0.3);
+            transition: transform 0.2s ease;
+        }
+
+        .hotline-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(183, 110, 121, 0.55);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .page-title h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ffffff 40%, var(--accent-pink) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .page-title p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .glass-box {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .glass-box h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--accent-pink);
+            padding-left: 1rem;
+        }
+
+        .glass-box p {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .philosophy-card {
+            background: rgba(255, 255, 255, 0.005);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .philosophy-card:hover {
+            border-color: rgba(183, 110, 121, 0.3);
+        }
+
+        .philosophy-card h3 {
+            font-size: 1.3rem;
+            color: var(--accent-pink);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .philosophy-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* UGC Reviews Block */
+        .ugc-section {
+            margin-bottom: 4rem;
+        }
+
+        .ugc-section h2 {
+            font-size: 2.1rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #fff;
+        }
+
+        .ugc-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .ugc-item {
+            backdrop-filter: blur(10px);
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2rem;
+            border-left: 4px solid var(--accent-rosegold);
+        }
+
+        .ugc-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+            color: var(--accent-pink);
+            font-weight: 700;
+        }
+
+        .ugc-text {
+            color: #cbd5e1;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .back-link a {
+            color: var(--accent-pink);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        .back-link a:hover {
+            color: var(--accent-rosegold);
+        }
+    </style>
 </head>
 <body>
 
-  <header class="header">
-    <div class="header-inner">
-      <a href="index.html" class="logo">마포 BRO INFO</a>
-      <nav class="nav">
-        <a href="index.html">홈</a>
-        <a href="about.html">상세정보</a>
-      </nav>
-    </div>
-  </header>
+    <div class="aura-1"></div>
+    <div class="aura-2"></div>
 
-  <section class="hero-sub">
-    <h1>우리를 소개합니다 (ABOUT US)</h1>
-    <p style="margin-top:10px; opacity:0.8;">마포 노래방의 건강하고 투명한 로컬 소비 생태계를 지향합니다.</p>
-  </section>
+    <header>
+        <div class="nav-container">
+            <a href="/" class="logo">MP ROSE KB</a>
+            <ul class="nav-links">
+                <li><a href="/">홈</a></li>
+                <li><a href="about.html">소개</a></li>
+            </ul>
+            <a href="tel:010-6279-0862" class="hotline-btn">다이렉트 시그널</a>
+        </div>
+    </header>
 
-  <main class="container">
-    <div class="content-box">
-      <h2>형들을 위한 100% 내상 제로 다짐</h2>
-      <p>
-    반갑다 형들! 이곳은 마포 밤문화 및 유흥/노래방 꿀통을 투명하게 정찰제로 까놓고 공유하는 '양심 아카이브'다. 
-    우리가 이 업계 정보를 모으기 시작한 이유는 아주 심플해. 돈 좀 쓰러 나가서 양아치 실장들한테 기분 잡치고 오지 말자는 거 하나뿐이다. 
-    나 역시 마포에서 산전수전 다 겪으며 수백만 원 날려본 유경험자로서, 이 바닥이 얼마나 정보의 불균형이 심한지 뼈저리게 느꼈거든. 
-    누구는 10만 원에 노는 걸 누구는 20만 원에 눈탱이 맞고 호구 잡히는 꼴을 더 이상 눈 뜨고 볼 수가 없어서 직접 총대를 멨다.
-    <br><br>
-    우리의 원칙은 단 세 가지다. 
-    첫째, 가격 정보는 사전에 100% 실시간 오픈한다. 
-    둘째, 검증되지 않은 이상한 업소는 소개조차 안 한다. 
-    셋째, 형들의 소중한 개인정보는 단 1도 수집하거나 악용하지 않는다. 
-    우리가 추천하는 모든 파트너십 라인은 사전에 우리가 몇 달간 직접 가보고 서비스 마인드부터 시작해서 수질, 위생 상태까지 현장 검증을 끝낸 곳들뿐이다. 
-    단순히 돈 몇 푼 받고 억지로 올리는 양아치 바이럴 광고 글이랑은 궤를 달리하니까 의심의 여지가 전혀 없을 거다.
-    <br><br>
-    특히 마포 노래방 분야는 워낙 업체들이 자주 바뀌고 트렌드가 빠르게 바뀌는 편이라, 정보의 '신선도'가 엄청 중요해. 
-    지난달에 좋았다고 해서 이번 달에도 무조건 좋으리란 보장이 없는 게 이 동네의 슬픈 현실이거든. 
-    그래서 우린 매주 로컬 모니터링 요원을 통해 서비스 퀄리티가 유지되고 있는지 꼼꼼하게 더블 체크를 돌리고 있어. 
-    만약 조금이라도 불만족스러운 컴플레인이 들어오거나 퀄리티 저하 조짐이 보이면 바로 아카이브에서 배제 처리해 버린다. 
-    형들이 소중한 돈 내고 노는 건데 당연히 최고 대접을 받아야지 않겠냐? 
-    믿고 볼 수 있는 안전 놀이터가 필요하거나 대기 시간 없이 바로 예약하고 싶다면 📞 <strong><a href="tel:010-6279-0862" style="color:#D4AF37; text-decoration:none;">010-6279-0862</a></strong> 여기로 언제든지 톡이나 전화 한 통 날려줘. 친한 동생, 형이라 생각하고 솔직하게 현장 상황 다 불어줄 테니까!
-  </p>
-      
-      <h2 style="margin-top:40px;">대략적인 시세 및 코스 안내</h2>
-      <p>아래 시세표는 마포 노래방 업계 표준 정찰 가격이며, 시간대나 단원 혜택에 따라 약간의 차이가 있을 수 있으니 예약 시 실시간 확인이 제일 빠릅니다.</p>
-      <table class="price-table">
-        <thead>
-          <tr>
-            <th>코스 분류</th>
-            <th>기본 시간</th>
-            <th>정찰 금액</th>
-            <th>특이사항</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>A 코스 (Standard)</strong></td>
-            <td>60분</td>
-            <td>시세가 변동</td>
-            <td>기본 음료 및 기본 룸 이용 포함</td>
-          </tr>
-          <tr>
-            <td><strong>B 코스 (Premium)</strong></td>
-            <td>90분</td>
-            <td>정찰제 할인 적용</td>
-            <td>가장 선호하는 베스트셀러 구성</td>
-          </tr>
-          <tr>
-            <td><strong>VIP 코스 (Special)</strong></td>
-            <td>120분</td>
-            <td>상담 시 우대</td>
-            <td>대형룸 보장 및 고급 음료 서비스</td>
-          </tr>
-        </tbody>
-      </table>
+    <main>
+        <section class="page-title">
+            <h1>ABOUT MP ROSE KB</h1>
+            <p>마포 직장인들의 피로 누적 버그를 해킹 복원하는 스마트 디렉터 Bro</p>
+        </section>
 
-      <div class="cta-box">
-        <h3>예약 및 내상 방지 가이드 무료 안내</h3>
-        <p>망설이지 말고 편하게 전화해서 물어봐라. 정직하게 팩트만 까발려 준다.</p>
-        <a href="tel:010-6279-0862" class="cta-phone">📞 24시간 실시간 콜: 010-6279-0862</a>
-      </div>
-    </div>
-  </main>
+        <section class="glass-box">
+            <h2>마포 노래방 내돈내산 가이드의 투명한 모토</h2>
+            <p>형들 반가워. 마포구 일대의 왜곡되고 불투명한 유흥 가격 구조를 파헤치고 정직한 가격표를 이식하는 '양심 설계자 Bro'다. 대한민국 비즈니스와 금융의 대표 허브인 마포역과 공덕역 일대는 매일 수많은 직장인들이 고된 업무를 마치고 회식과 피로 회복을 위해 유흥가를 찾지. 그러나 정보 비대칭의 틈새를 악용해 터무니없는 요금 장난질과 덤터기를 씌우는 악덕 업소들이 판을 치는 것도 팩트야.</p>
+            
+            <p>데니스 리치가 창조한 UNIX OS의 32비트 타임 데이터가 최대 한계를 초과하면 Y2K38 시스템 버그가 터져 초기화 오류를 유발하듯, 끊임없는 야근과 격무에 지친 형들의 육체 역시 한계치에 이르면 강제 다운을 일으키지. 더 큰 신체 오작동이 오기 전에, 010-6279-0862 예약 핫라인 조율을 거쳐 안전하고 정직하게 릴렉스하는 양심 정찰제 빌드를 탑승해봐. 팩트 데이터와 최종 예산을 사전에 고정 매칭해 두는 것만으로도 형들의 밤은 완벽하게 엄호받는 거야.</p>
 
-  <footer class="footer">
-    <p><strong>마포 노래방 안전 아카이브 포털</strong></p>
-    <p>예약 문의 및 실시간 가용 확인: 📞 <a href="tel:010-6279-0862" style="color:var(--accent); font-weight:bold;">010-6279-0862</a></p>
-    <p style="font-size:0.8rem; opacity:0.5; margin-top:20px;">&copy; 2026 마포 BRO. All Rights Reserved.</p>
-  </footer>
+            <div class="philosophy-grid">
+                <div class="philosophy-card">
+                    <h3>1. 주대 조작 차단</h3>
+                    <p>현장의 만취 상황을 타겟 삼아 계산서를 조작하는 불량 수법을 완벽 차단하고, 사전 협의된 정찰제 주대만 보장한다.</p>
+                </div>
+                <div class="philosophy-card">
+                    <h3>2. 리얼 룸 매킹</h3>
+                    <p>시설의 청결 상태, 음향 시스템 퀄리티, 매니저의 서비스 마인드까지 모든 실전 수치가 최고 등급을 획득한 마포 명소만 엄선 매핑한다.</p>
+                </div>
+                <div class="philosophy-card">
+                    <h3>3. 노 눈탱이 프로토콜</h3>
+                    <p>우리 다이렉트 핫라인 예약을 거치는 모든 유저들은 불합리한 덤터기로부터 절대 안전하도록 보장된 로즈골드 보호망을 작동한다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ugc-section">
+            <h2>팩트 검증 요원들의 Real 로그 (UGC)</h2>
+            <div class="ugc-list">
+                <div class="ugc-item">
+                    <div class="ugc-meta">
+                        <span>작성자: 마포갈매기킬러</span>
+                        <span>평점: ★★★5 | 추천: 가성비 가라오케</span>
+                    </div>
+                    <div class="ugc-text">
+                        "마포역 주변에서 회식할 때마다 항상 바가지 요금 때문에 긴장 상태였는데, Bro를 알고 나서는 마음이 정말 편해졌습니다. 가격을 미리 010-6279-0862 로 투명하게 조율하고 가니까 정직하게 딱 그 금액만 나오더군요. UNIX Y2K38 버그 썰도 아주 흥미로웠고 피로 포맷 제대로 완료했습니다."
+                    </div>
+                </div>
+
+                <div class="ugc-item">
+                    <div class="ugc-meta">
+                        <span>작성자: 야근러의반격</span>
+                        <span>평점: ★★★★★ | 추천: 비즈니스 가라오케</span>
+                    </div>
+                    <div class="ugc-text">
+                        "010-6279-0862 로 미리 오더 넣어두고 가니까 대기 시간 1도 없이 즉시 안내받았습니다. 피로에 절어 컴퓨터 먹통 되기 직전이었는데 최고의 시설에서 피로를 완벽하게 재부팅 완료했네요. 대만족합니다."
+                    </div>
+                </div>
+
+                <div class="ugc-item">
+                    <div class="ugc-meta">
+                        <span>작성자: 마포구로즈골드</span>
+                        <span>평점: ★★★★☆ | 추천: 프라이빗 가라오케</span>
+                    </div>
+                    <div class="ugc-text">
+                        "여의도나 마포에서 이 정도 퀄리티의 노래바를 정직한 가격대에 즐길 수 있는 곳이 또 있을까 싶네요. 추가 덤터기 일절 없고 주대 매핑이 너무 깔끔합니다. 정기 회식 노선으로 완전 고정입니다."
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="back-link">
+            <a href="/">← 홈으로 돌아가기</a>
+        </div>
+    </main>
+
+    <footer>
+        <span class="footer-logo">MP ROSE KB</span>
+        <p>시그널 예약: 010-6279-0862 (부재시 문자 필)</p>
+        <ul class="footer-links">
+            <li><a href="/">홈</a></li>
+            <li><a href="about.html">소개</a></li>
+        </ul>
+        <p>© 2026 MP Rose KB. All rights reserved. 마포 노래방 데이터 정밀 리포트.</p>
+    </footer>
 
 </body>
 </html>
