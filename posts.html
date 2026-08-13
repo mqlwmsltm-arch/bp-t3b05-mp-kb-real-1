@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/2) · t3b05-mp-kb-real-1</title>
+  <meta name="description" content="t3b05-mp-kb-real-1에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://t3b05-mp-kb-real-1.maphoshirts.com/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+        /* Font Imports */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;400;700&family=Noto+Serif+KR:wght@300;400;700&display=swap');
+
+        /* Design System Variables */
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #f0f0f0;
+            --accent-color: #d4af37; /* Gold accent */
+            --text-color: #333;
+            --heading-font: 'Playfair Display', serif;
+            --body-font: 'Noto Serif KR', serif;
+            --nav-font: 'Cormorant Garamond', serif;
+            --container-max-width: 1200px;
+            --spacing-unit: 1rem;
+        }
+
+        /* Global Styles */
+        html {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        *, *::before, *::after {
+            box-sizing: inherit;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--body-font);
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--secondary-color);
+            padding-top: 80px; /* For sticky nav */
+        }
+
+        .container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+            padding: calc(var(--spacing-unit) * 2);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--heading-font);
+            margin-bottom: var(--spacing-unit);
+            color: var(--primary-color);
+            line-height: 1.2;
+        }
+
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.75rem; }
+
+        p {
+            margin-bottom: var(--spacing-unit);
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Navigation */
+        .site-header {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: var(--spacing-unit) 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            font-family: var(--nav-font);
+        }
+
+        .site-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .site-nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .site-nav li {
+            margin-left: calc(var(--spacing-unit) * 2);
+        }
+
+        .site-nav a {
+            color: var(--secondary-color);
+            font-weight: 400;
+            font-size: 1.1rem;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+        }
+
+        .site-nav a:hover,
+        .site-nav a.active {
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        /* Blog Specific Styles */
+        .blog-post {
+            background-color: #fff;
+            padding: calc(var(--spacing-unit) * 3);
+            margin-top: calc(var(--spacing-unit) * 2);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .blog-post h1 {
+            text-align: center;
+            margin-bottom: calc(var(--spacing-unit) * 2);
+            color: var(--primary-color);
+        }
+
+        .blog-post .meta {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: var(--spacing-unit);
+        }
+
+        .blog-post p {
+            margin-bottom: var(--spacing-unit);
+            text-align: justify;
+        }
+
+        .blog-post h2 {
+            margin-top: calc(var(--spacing-unit) * 2);
+            margin-bottom: var(--spacing-unit);
+            color: var(--primary-color);
+            border-bottom: 1px solid #eee;
+            padding-bottom: calc(var(--spacing-unit) / 2);
+        }
+
+        .blog-post ul {
+            margin-left: var(--spacing-unit);
+            margin-bottom: var(--spacing-unit);
+        }
+
+        .blog-post li {
+            margin-bottom: calc(var(--spacing-unit) / 2);
+        }
+
+        .cta-card {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: calc(var(--spacing-unit) * 2);
+            margin-top: calc(var(--spacing-unit) * 3);
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-card h3 {
+            color: var(--accent-color);
+            margin-bottom: var(--spacing-unit);
+        }
+
+        .cta-card p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-card .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
+            margin-top: var(--spacing-unit);
+            border-radius: 4px;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-card .btn:hover {
+            background-color: #c49f33;
+            text-decoration: none;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 60px;
+            }
+            .site-header .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .site-nav ul {
+                flex-direction: column;
+                margin-top: var(--spacing-unit);
+            }
+            .site-nav li {
+                margin: 0;
+                margin-bottom: 0.5rem;
+            }
+            .blog-post {
+                padding: var(--spacing-unit);
+            }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.75rem; }
+        }
+    </style>
+  <meta property="og:title" content="글 목록 (1/2) · t3b05-mp-kb-real-1">
+  <meta property="og:description" content="t3b05-mp-kb-real-1에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://t3b05-mp-kb-real-1.maphoshirts.com/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+        <div class="container">
+            <div class="site-title">Mapo Insider</div>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/restaurants">맛집</a></li>
+                    <li><a href="/cafes">카페</a></li>
+                    <li><a href="/bars">술집</a></li>
+                    <li><a href="/karaoke" class="active">노래방</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 39개 · 1/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-700.html">마포 노래방 가성비 비교</a>
+        <p class="post-item__summary">마포 쪽 노래방을 여러 곳 돌려 봤다. 새벽 시간대를 기준으로 정리한다. 새벽 요금이 낮거나 음료 무제한 같은 조건이 붙는 곳이 대부분이라 가성비 차이가 크게 벌어진다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0324.html">마포 노래방 내돈내산, 합리적 선택을 찾아서</a>
+        <p class="post-item__summary">마포 노래방 내돈내산으로 찾은 이곳은, 진짜 합리적인 가격에 다양한 노래를 즐길 수 있도록 구성되어 있다. 가격 대비 편리함이 돋보이는 점은 바로 방음과 음질에 대한 세밀한 관리이다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0325.html">마포 노래방 내돈내산 솔직 후기</a>
+        <p class="post-item__summary">마포에는 생각보다 노래방 선택지가 다양하다. 홍대입구역에서 합정역 사이 거리를 따라 늘어선 업소들 각각 분위기와 시스템이 조금씩 다르다. 코인노래방부터 프리미엄 반주실까지 취향에 맞춰 고를 수 있다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0326.html">마포 노래방 내돈내산, 현지 감성 속에 숨겨진 즐거움</a>
+        <p class="post-item__summary">마포 반포 지역에는 도심 속에서 편안히 즐길 수 있는 과거도, 현재도 변하지 않는 노래방이 있다. 각종 장비와 스테이지 조명은 전문 재료의 차이를 한눈에 보여준다. 밤바다 같은 외부 인테리어가 내부</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0327.html">마포 노래방 내돈내산 솔직 후기</a>
+        <p class="post-item__summary">마포에는 생각보다 다양한 콘셉트의 노래방이 자리 잡고 있다. 홍대입구역 인근부터 합정, 상수 쪽까지 발품을 팔아보면 코인 노래방부터 고급 룸을 갖춘 곳까지 취향에 맞게 고를 수 있다. 최근 직접 방</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0328.html">마포 노래방 내돈내산, 가성비 최고 찾아봤다</a>
+        <p class="post-item__summary">마포 노래방 내돈내산은 평소에 몇 번이라도 들르던 곳이지만, 입장료가 매번 다를 때가 많습니다. 가게마다 20분 기준 가격이 9,000원에 이르거나 12,000원 정도가 차이가 나기 때문에 기대한 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0329.html">마포에서 노래방 고를 때 알게 된 것들</a>
+        <p class="post-item__summary">마포 쪽에서 친구들과 모일 일이 있으면 자연스럽게 노래방을 찾게 된다. 홍대입구 주변부터 합정, 상수까지 선택지가 꽤 많아서 어디를 갈지 고민이 되기도 한다. 위치나 가격대만 보고 결정하기 쉽지만,</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0330.html">마포 노래방 내돈내산, 도심의 편안한 음향 공간</a>
+        <p class="post-item__summary">마포에 위치한 내돈내산 노래방은 깔끔한 인테리어와 최신 음향 장비를 갖춰 지역 주민과 젊은이들에게 인기를 끌고 있다. 24시간 운영하며 개별 실을 제공해 프라이버시를 잃지 않도록 구성했다. 주말엔 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0331.html">마포 노래방 내돈내산 후기</a>
+        <p class="post-item__summary">마포 지역에는 생각보다 많은 노래방이 자리잡고 있다. 홍대입구부터 합정까지 거리마다 다양한 콘셉트의 곳들이 있어서 선택의 폭이 넓다. 각각의 특징과 분위기가 천차만별이라 취향에 맞는 곳을 찾는 재미</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0332.html">마포 노래방 내돈내산: 저렴한 가격에 즐기는 리듬 파티</a>
+        <p class="post-item__summary">마포구의 바쁜 거리 한복판에 위치한 마포 노래방 내돈내산은, 오랜 역사를 자랑하면서도 최신 기기와 편안한 좌석으로 고객들에게 최적의 노래방 경험을 제공합니다. 매일 24시간 운영하며, 누구나 쉽게 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0333.html">마포 노래방 내돈내산, 숨겨진 매력 찾기</a>
+        <p class="post-item__summary">마포의 숨은 보석 같은 노래방 내돈내산은 인근 커피숍 곁에 자리 잡고 있다. 손님들은 조용한 분위기 속에서 친근한 장비를 직접 체험하며, 가격 대비 만족도가 높다. 청량한 공간의 고요함이 마포의 피</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0334.html">마포 노래방 내돈내산, 24시간 이용자 만족의 비결</a>
+        <p class="post-item__summary">마포에 위치한 노래방 내돈내산은 차근차근 입소문이 자라면서 지역 주민들에게 사랑받고 있다. 깨끗한 인테리어와 최신 음향 시스템이 결합되어 손님들로부터 높은 평가를 받는다. 예약 앱으로 간편하게 이용</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0335.html">마포 노래방 내돈내산</a>
+        <p class="post-item__summary">최근 홍대입구 일대에서 마포 노래방 한 곳을 직접 방문해 보았다. 평일 늦은 시간이었는데도 생각보다 많은 사람들이 이용하고 있어 분위기가 꽤 활기찼다. 입구에서부터 내부 인테리어까지 전체적으로 깔끔</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0336.html">마포 노래방 내돈내산, 소리와 조명이 만드는 밤의 색채</a>
+        <p class="post-item__summary">사운드에 집착하는 이들이 꼭 가봐야 할 마포 노래방입니다. 최신 앰프와 빛나는 LED 조명으로 무대를 완벽하게 재현해 주죠. 분위기만큼 소리도 급격히 끓어오르는 느낌이 무척 흥미롭습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0337.html">마포 노래방 내돈내산으로 찾은 괜찮은 곳</a>
+        <p class="post-item__summary">마포 쪽에서 친구들과 가볍게 노래방을 찾다 보면 선택지가 꽤 많다. 홍대입구 근처부터 합정, 상수까지 골목마다 간판이 즐비하다. 다만 막상 가보면 방음이나 시설 상태가 천차만별이라 직접 발품을 팔아</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0338.html">마포 노래방 내돈내산, 음악과 여유의 만남</a>
+        <p class="post-item__summary">마포 지역에서 사랑받는 노래방, '내돈내산'은 퀄리티 높은 음향과 넓은 프라이빗 룸이 특징이다. 가수 같은 분위기와 편안한 공간이 만나 언제든지 노래를 부르고 싶은 마음을 자극한다. 밤마다 이어지는</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0339.html">마포 노래방 내돈내산 스타일</a>
+        <p class="post-item__summary">마포구 합정역 인근에는 다양한 스타일의 노래방이 자리잡고 있다. 최근 시스템과 시설을 개선하며 눈에 띄는 곳이 있어 관심을 모은다. 합정역 2번 출구에서 도보 3분 거리로 접근성도 괜찮은 편이다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0340.html">마포 노래방 내돈내산, 도시 속 작은 정원 같은 무제한 노래체험</a>
+        <p class="post-item__summary">마포에 위치한 노래방은 가벼운 가격에 무제한 개인방을 제공해 트렌디한 도시 생활에 안성맞춤이다. 입구에서부터 깔린 조명이 부드럽게 분위기를 물들여, 한 잔의 커피처럼 앉은 순간을 힐링해 준다. 낮은</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0496.html">마포 노래방 내돈내산 필수 체크리스트와 알고리즘</a>
+        <p class="post-item__summary">마포 노래방 내돈내산 정보를 찾을 때 단순히 즐거움만을 쫓기보다는 체계적인 확인 항목을 점검해야 합니다. 특히 웹상에서 정보를 검색하는 알고리즘 또한 신용도를 중요한 지표로 삼고 있다는 사실을 인지</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0497.html">마포 노래방 내돈내산 경험으로 본 셔츠룸 리얼 후기 소셜 마케팅 가이드와 주의사항</a>
+        <p class="post-item__summary">지인들과 함께 마포 노래방 내돈내산 경험을 공유하다 보면 자연스럽게 셔츠룸 시스템에 대한 궁금증이 생기기 마련입니다. 처음 방문하는 초행자들은 정보의 부족으로 인해 당혹스러운 상황을 겪기도 합니다.</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
